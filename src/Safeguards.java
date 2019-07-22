@@ -5,6 +5,11 @@ import java.util.HashMap;
 /*
 Safeguards stores the shifts data for all safe guards
 and provides the method to calculate max coverage time after firing one minimum impacting guard.
+
+First quickSort all the shifts by the values of start points.
+Then, calculate the total coverage time and the number of "single covered time points" of each guard.
+(By "single covered time points"", I mean time points, which are covered by only one person.)
+At last, calculate the final result by minus the minimum number of single coverage time points of one guard from Total coverage time.
  */
 public class Safeguards {
 
